@@ -1,14 +1,8 @@
-# Microservice template [![Build](https://github.com/Covid-Alert-Microservices/Microservice-template/actions/workflows/build.yaml/badge.svg)](https://github.com/Covid-Alert-Microservices/Microservice-template/actions/workflows/build.yaml)
+# Alerts Microservice
+[![Build](https://github.com/Covid-Alert-Microservices/alerts/actions/workflows/build.yaml/badge.svg)](https://github.com/Covid-Alert-Microservices/alerts/actions/workflows/build.yaml) [![Release](https://img.shields.io/github/v/release/Covid-Alert-Microservices/alerts)](https://github.com/Covid-Alert-Microservices/alerts/tags) [![ReleaseDate](https://img.shields.io/github/release-date/Covid-Alert-Microservices/alerts)](https://github.com/Covid-Alert-Microservices/alerts/tags)
 
-This repository aims to provide a starter template for our microservices.
-It provides the base configuration to integrate with other microservices as Keycloak.
-
-## Currently shipped in the template
-
-- Configuration of Spring Security to only accept authenticated request on `/api/**`
-- Authentication of requests with Keycloak
-- Listening and publishing of Kafka topics
-- CI to build the application
+## Description
+This repository manages alerts for Covid-Alert.
 
 ## Environment variables
 
@@ -18,39 +12,3 @@ The following environment variables can be configured:
 - `POSTGRES_HOST`: the host for the PostgreSQL database (default: `localhost:5432/postgres`)
 - `POSTGRES_USER`: the user for the PostgreSQL database (default: `postgres`)
 - `POSTGRES_PASSWORD`: the password for the PostgreSQL database (default: `postgres`)
-
-## Removing unused parts
-
-### Keycloak
-
-- Delete classes
-  - `MyController`
-  - `KeycloakSecurityConfig`
-- Delete lines
-  - Keycloak related lines in `application.properties`
-  - Keycloak related lines in `build.gradle`
-
-### Kafka
-
-- Delete classes
-  - `KafkaConfig`
-  - `PingPongListener`
-- Delete lines
-  - Kafka related lines in `application.properties` in both `main` and `test` source-sets
-  - Kafka related lines in `build.gradle`
-
-### PostgreSQL
-
-- Delete classes
-  - `Movie`
-  - `MoviesRepositories`
-- Delete lines
-  - Postgres related in `application.properties` in both `main` and `test` source-sets
-  - Postgres related in `build.gradle`
-
-### Redis
-
-- Delete classes
-  - `RedisController`
-- Delete lines
-  - Redis related in `build.gradle`

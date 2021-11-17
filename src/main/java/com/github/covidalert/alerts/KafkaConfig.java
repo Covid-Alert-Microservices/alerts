@@ -1,4 +1,4 @@
-package com.github.covidalert.microservicetemplate;
+package com.github.covidalert.alerts;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.common.config.TopicConfig;
@@ -13,15 +13,9 @@ public class KafkaConfig
 {
 
     @Bean
-    public NewTopic ping()
+    public NewTopic sendAlert()
     {
-        return TopicBuilder.name("ping").config(TopicConfig.RETENTION_MS_CONFIG, "1").build();
-    }
-
-    @Bean
-    public NewTopic pong()
-    {
-        return TopicBuilder.name("pong").config(TopicConfig.RETENTION_MS_CONFIG, "1").build();
+        return TopicBuilder.name("send_alert").config(TopicConfig.RETENTION_MS_CONFIG, "1").build();
     }
 
 }

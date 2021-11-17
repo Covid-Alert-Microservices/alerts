@@ -1,4 +1,4 @@
-package com.github.covidalert.microservicetemplate.controllers;
+package com.github.covidalert.alerts.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
