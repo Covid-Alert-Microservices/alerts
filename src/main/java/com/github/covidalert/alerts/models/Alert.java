@@ -19,6 +19,10 @@ public class Alert
 
     public Alert() { }
 
+    public Long getId() {
+        return id;
+    }
+
     public Alert(String userId, String message) {
         this.userId = userId;
         this.message = message;
