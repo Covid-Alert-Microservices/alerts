@@ -8,7 +8,6 @@ import javax.persistence.Id;
 @Entity
 public class Alert
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -19,29 +18,17 @@ public class Alert
 
     public Alert() { }
 
-    public Long getId() {
-        return id;
-    }
-
     public Alert(String userId, String message) {
         this.userId = userId;
         this.message = message;
     }
 
-    public String getUserId() {
-        return userId;
-    }
+    public Long getId() { return id; }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
+    public String getUserId() { return userId; }
 
     public String getMessage() {
         return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
 }
