@@ -1,5 +1,5 @@
 # Alerts Microservice
-[![Build](https://github.com/Covid-Alert-Microservices/alerts/actions/workflows/build.yaml/badge.svg)](https://github.com/Covid-Alert-Microservices/alerts/actions/workflows/build.yaml) [![Release](https://img.shields.io/github/v/release/Covid-Alert-Microservices/alerts)](https://github.com/Covid-Alert-Microservices/alerts/tags) [![ReleaseDate](https://img.shields.io/github/release-date/Covid-Alert-Microservices/alerts)](https://github.com/Covid-Alert-Microservices/alerts/tags)
+[![Build](https://github.com/Covid-Alert-Microservices/alerts/actions/workflows/build.yaml/badge.svg)](https://github.com/Covid-Alert-Microservices/alerts/actions/workflows/build.yaml) [![Release](https://img.shields.io/github/v/release/Covid-Alert-Microservices/alerts)](https://github.com/Covid-Alert-Microservices/alerts/tags) [![ReleaseDate](https://img.shields.io/github/release-date/Covid-Alert-Microservices/alerts)](https://github.com/Covid-Alert-Microservices/alerts/tags) [![codecov](https://codecov.io/gh/Covid-Alert-Microservices/alerts/branch/master/graph/badge.svg?token=SYQ9Q1OYP0)](https://codecov.io/gh/Covid-Alert-Microservices/alerts)
 
 ## Description
 This repository manages alerts for Covid-Alert.
