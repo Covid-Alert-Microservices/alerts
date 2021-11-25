@@ -27,7 +27,10 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(controllers = AlertsController.class)
-@Import({ServletKeycloakAuthUnitTestingSupport.UnitTestConfig.class, KeycloakSecurityConfig.class})
+@Import({
+        ServletKeycloakAuthUnitTestingSupport.UnitTestConfig.class,
+        KeycloakSecurityConfig.class
+})
 public class AlertsControllerWebTest
 {
 
