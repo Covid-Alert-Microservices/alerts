@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.security.Principal;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -27,15 +25,18 @@ public class AlertsController
     }
 
     @DeleteMapping("{alertId}")
-    public boolean deleteAlert(Principal principal, @PathVariable("alertId") String sAlertId)
+    public boolean deleteAlert(Principal principal, @PathVariable("alertId") String sAlertId) throws ResponseStatusException
     {
         String userId = principal.getName();
-        try{
+        try
+        {
             Long alertId = Long.parseLong(sAlertId);
-            alertsRepository.deleteByIdAndUserId(alertId,userId);
+            alertsRepository.deleteByIdAndUserId(alertId, userId);
             return true;
-        } catch (Exception e){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "alert not found");
+        }
+        catch (Exception e)
+        {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Alert not found");
         }
     }
 

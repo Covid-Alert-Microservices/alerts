@@ -16,19 +16,33 @@ public class Alert
 
     private String message;
 
-    public Alert() { }
+    public Alert()
+    {
+    }
 
-    public Alert(String userId, String message) {
+    public Alert(String userId, String message)
+    {
         this.userId = userId;
         this.message = message;
     }
 
-    public Long getId() { return id; }
+    public Long getId()
+    {
+        return id;
+    }
 
-    public String getUserId() { return userId; }
+    public String getUserId()
+    {
+        return userId;
+    }
 
-    public String getMessage() {
+    public String getMessage()
+    {
         return message;
     }
 
+    public void setId(Long id)
+    {
+        this.id = id;
+    }
 }
