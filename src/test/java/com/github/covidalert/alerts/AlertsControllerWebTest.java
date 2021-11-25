@@ -29,7 +29,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = AlertsController.class)
 @Import({
         ServletKeycloakAuthUnitTestingSupport.UnitTestConfig.class,
-        KeycloakSecurityConfig.class
+        KeycloakSecurityConfig.class,
+        TestConfig.class
 })
 public class AlertsControllerWebTest
 {
