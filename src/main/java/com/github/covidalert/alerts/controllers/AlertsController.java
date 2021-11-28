@@ -24,7 +24,7 @@ public class AlertsController
         return alertsRepository.findByUserId(userId);
     }
 
-    @DeleteMapping("{alertId}")
+    @DeleteMapping("/{alertId}")
     public boolean deleteAlert(Principal principal, @PathVariable("alertId") String sAlertId) throws ResponseStatusException
     {
         String userId = principal.getName();
