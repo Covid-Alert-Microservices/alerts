@@ -92,9 +92,9 @@ public class AlertsRepositoryTest
         entityManager.flush();
         Long alertId = savedAlert.getId();
 
-        Integer deletedAlert = alertsRepository.deleteByIdAndUserId(alertId, userOneId);
+        Long deletedAlert = alertsRepository.deleteByIdAndUserId(alertId, userOneId);
 
-        assertThat(deletedAlert).isEqualTo(1);
+        assertThat(deletedAlert).isEqualTo(1L);
     }
 
     @Test
@@ -105,9 +105,9 @@ public class AlertsRepositoryTest
         entityManager.flush();
         Long alertId = savedAlert.getId();
 
-        Integer otherDeletedAlert = alertsRepository.deleteByIdAndUserId(alertId, userTwoId);
+        Long otherDeletedAlert = alertsRepository.deleteByIdAndUserId(alertId, userTwoId);
 
-        assertThat(otherDeletedAlert).isEqualTo(0);
+        assertThat(otherDeletedAlert).isEqualTo(0L);
     }
 
     @Test
@@ -118,9 +118,9 @@ public class AlertsRepositoryTest
         entityManager.flush();
         Long alertId = savedAlert.getId();
 
-        Integer deletedAlert = alertsRepository.deleteByIdAndUserId(alertId + 1, userOneId);
+        Long deletedAlert = alertsRepository.deleteByIdAndUserId(alertId + 1, userOneId);
 
-        assertThat(deletedAlert).isEqualTo(0);
+        assertThat(deletedAlert).isEqualTo(0L);
     }
 
 }

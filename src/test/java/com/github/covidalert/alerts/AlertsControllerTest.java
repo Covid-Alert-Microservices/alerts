@@ -71,10 +71,9 @@ public class AlertsControllerTest
     public void givenRepositoryWithOneAlert_whenDeleteAlert_shouldReturnTrue()
     {
         when(alertsRepository.deleteByIdAndUserId(0L, "user-id"))
-                .thenReturn(1);
+                .thenReturn(1L);
 
-        boolean deleted = alertsController.deleteAlert(principal, "0");
-        assertThat(deleted).isTrue();
+        alertsController.deleteAlert(principal, "0");
         verify(alertsRepository).deleteByIdAndUserId(eq(0L), eq("user-id"));
     }
 

@@ -86,7 +86,7 @@ public class AlertsControllerWebTest
         api.get("/api")
                 .andExpect(status().isOk());
         api.delete("/api/0")
-                .andExpect(status().isOk()); // Here getting a NotFound indicates we're authorized
+                .andExpect(status().isNotFound()); // Here getting a NotFound indicates we're authorized
     }
 
     @Test
@@ -125,11 +125,10 @@ public class AlertsControllerWebTest
     public void givenOneAlertInRepository_whenDeleteAlert_shouldReturnTrue() throws Exception
     {
         when(alertsRepository.deleteByIdAndUserId(eq(0L), any()))
-                .thenReturn(1);
+                .thenReturn(1L);
 
         api.delete("/api/0")
-                .andExpect(status().isOk())
-                .andExpect(content().string("true"));
+                .andExpect(status().isNoContent());
     }
 
     @Test
